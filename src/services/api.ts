@@ -4,10 +4,10 @@ import { BranchGeofence, GeofenceCheckInResult, MemberProfile, ActiveSession, Ch
 // When testing on Android Emulator: use 'http://10.0.2.2:5254'
 // When testing on Physical device: use your laptop's WiFi IP e.g. 'http://192.168.1.xxx:5254'
 // When testing on iOS Simulator / Web: use 'http://localhost:5254'
-export let API_BASE_URL = 'http://192.168.120.68:5254/api/v1/mobile';
+export let API_BASE_URL = 'http://192.168.15.96:5254/api/v1/mobile';
 
 export const setApiBaseUrl = (newUrl: string) => {
-  API_BASE_URL = newUrl.replace(/\/+$/, '');
+  API_BASE_URL = newUrl.trim().replace(/\/+$/, '');
 };
 
 export interface MemberApiResponse {

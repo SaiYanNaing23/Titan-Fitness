@@ -3,6 +3,7 @@
     "name": "Titan Fitness",
     "slug": "titan-fitness-mobile",
     "version": "1.0.0",
+    "plugins": ["./plugins/withLocalHttp"],
     "orientation": "portrait",
     "icon": "./assets/icon.jpg",
     "userInterfaceStyle": "dark",

@@ -13,7 +13,7 @@ import {
 } from 'react-native';
 
 interface Props {
-  onLoginSuccess: (memberCode: string) => void;
+  onLoginSuccess: (memberCode: string) => Promise<void>;
   onOpenSettings: () => void;
 }
 
@@ -33,7 +33,7 @@ export const LoginScreen: React.FC<Props> = ({ onLoginSuccess, onOpenSettings })
     setLoading(true);
 
     try {
-      onLoginSuccess(code);
+      await onLoginSuccess(code);
     } catch (err: any) {
       setErrorMessage(err.message || 'Login failed. Please verify your credentials.');
     } finally {

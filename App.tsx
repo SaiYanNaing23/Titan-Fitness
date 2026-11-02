@@ -110,7 +110,8 @@ export default function App() {
                 Alert.alert('Member Not Found', 'No active membership found for this Member ID or phone number.');
               }
             } catch (err: any) {
-              Alert.alert('Connection Failed', `Cannot connect to server at ${API_BASE_URL}.\nPlease check server connection or tap ⚙️ settings.`);
+              const detail = err instanceof Error ? err.message : String(err);
+              Alert.alert('Connection Failed', `Server: ${API_BASE_URL}\n${detail}`);
             }
           }}
           onOpenSettings={() => {
@@ -142,7 +143,7 @@ export default function App() {
                 style={styles.textInput}
                 value={tempApiUrl}
                 onChangeText={setTempApiUrl}
-                placeholder="http://192.168.120.68:5254/api/v1/mobile"
+                placeholder="http://192.168.15.96:5254/api/v1/mobile"
                 placeholderTextColor="#64748b"
                 autoCapitalize="none"
               />
