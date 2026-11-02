@@ -1,0 +1,18 @@
+# System files (macOS / Windows)
+.DS_Store
+Thumbs.db
+
+# Environments and API Keys
+.env
+.env.local
+
+# Dependency folders
+node_modules/
+venv/
+__pycache__/
+
+# Build directories and logs
+dist/
+build/
+*.log
+.expo/

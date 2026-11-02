@@ -1,0 +1,42 @@
+{
+  "expo": {
+    "name": "Titan Fitness",
+    "slug": "titan-fitness-mobile",
+    "version": "1.0.0",
+    "orientation": "portrait",
+    "icon": "./assets/icon.jpg",
+    "userInterfaceStyle": "dark",
+    "splash": {
+      "backgroundColor": "#0f172a"
+    },
+    "ios": {
+      "supportsTablet": true,
+      "bundleIdentifier": "com.titanfitness.memberapp",
+      "infoPlist": {
+        "NSLocationWhenInUseUsageDescription": "Titan Fitness needs your location to automatically check you in when you arrive at the gym branch.",
+        "NSLocationAlwaysAndWhenInUseUsageDescription": "Titan Fitness needs background location access to auto check-in and measure your workout duration when you enter the gym geofence zone.",
+        "UIBackgroundModes": [
+          "location",
+          "fetch"
+        ]
+      }
+    },
+    "android": {
+      "package": "com.titanfitness.memberapp",
+      "adaptiveIcon": {
+        "backgroundColor": "#0f172a"
+      },
+      "permissions": [
+        "ACCESS_FINE_LOCATION",
+        "ACCESS_COARSE_LOCATION",
+        "ACCESS_BACKGROUND_LOCATION",
+        "INTERNET"
+      ]
+    },
+    "extra": {
+      "eas": {
+        "projectId": "f810c701-329a-40e2-82b1-b13c84b30958"
+      }
+    }
+  }
+}
